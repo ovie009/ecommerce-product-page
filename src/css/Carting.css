@@ -1,0 +1,87 @@
+.price-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.price{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.discount{
+    background-color: var(--pale-orange);
+    color: var(--orange);
+    padding: 5px 10px;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+.present-price{
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.original-price{
+    color: var(--grayish);
+    font-weight: 700;
+
+}
+
+.add-cart{
+    color: white;
+    background-color: white;
+}
+
+form{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.input-wrapper{
+    height: 60px;
+    width: 100%;
+    background-color: var(--light);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#cart-count{
+    height: 100%;
+    width: 80%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    background-color: var(--light);
+}
+
+.add-to-cart{
+    height: 60px;
+    width: 100%;
+    background-color: var(--orange);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    gap: 20px;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0px 20px 20px 10px var(--pale-orange);
+}
+
+ion-icon{
+    color: var(--white);
+    font-size: 20px;
+    --ionicon-stroke-width: 50px;
+}
