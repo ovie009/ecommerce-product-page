@@ -31,3 +31,45 @@
     text-align: left;
     color: var(--dark);
 }
+
+@media screen and (min-width: 768px) {
+    .product-wrapper{
+        /* justify-content: space-around; */
+        padding-inline: 30px;
+        gap: 30px;
+    }
+
+    .product-preview{
+        font-size: 1.2em;
+    }
+    
+    .product-heading{
+        font-size: 40px;
+    }
+
+    .product-paragraph{
+        width: 60ch;
+    }
+    
+}
+
+@media screen and (min-width: 1024px) {
+    .product-wrapper{
+        width: 50%;
+        min-height: fit-content;
+        max-height: 650px;
+        justify-content: center;
+    }
+    
+    .product-preview{
+        font-size: 1em;
+    }
+    
+    .product-heading{
+        font-size: 35px;
+    }
+    
+    .product-paragraph{
+        width: 100%;
+    }
+}

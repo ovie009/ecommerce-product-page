@@ -80,8 +80,49 @@ form{
     box-shadow: 0px 20px 20px 10px var(--pale-orange);
 }
 
+.add-to-cart:hover{
+    box-shadow: 0px 20px 20px 10px var(--pale-orange),  inset 0px 0px 10px 100px rgba(255, 255, 255, 0.5);
+}
+
 ion-icon{
     color: var(--white);
     font-size: 20px;
     --ionicon-stroke-width: 50px;
 }
+
+@media screen and (min-width: 768px) {
+    form{
+        gap: 40px;
+    }
+    
+    .input-wrapper{
+        height: 80px;
+    }
+
+    .add-to-cart{
+        height: 80px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .input-wrapper{
+        height: 60px;
+        width: 40%;
+        justify-content: space-between;
+    }
+    
+    .add-to-cart{
+        height: 60px;
+    }
+
+    .price-wrapper{
+        flex-flow: column;
+        align-items: flex-start;
+    }
+    
+    form{
+        flex-flow: row;
+        gap: 20px;
+    }
+}
+

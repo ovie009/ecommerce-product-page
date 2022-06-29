@@ -3,6 +3,7 @@ import Slide from './Slide';
 import ProductInfo from './ProductInfo';
 import Header from './Header';
 import { useState } from 'react';
+import DisplayProduct from './DisplayProduct';
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -67,11 +68,14 @@ function App() {
   // console.log(cart);
 
   return (
-    <div className="App">
+    <>
       <Header cart={cart} handleCart={handleCart} emptyCart={emptyCart} />
-      <Slide />
-      <ProductInfo product={product} handleQuantity={handleQuantity} handleCart={handleCart} />
-    </div>
+      <main>
+        <Slide />
+        <DisplayProduct />
+        <ProductInfo product={product} handleQuantity={handleQuantity} handleCart={handleCart} />
+      </main>
+    </>
   );
 }
 
