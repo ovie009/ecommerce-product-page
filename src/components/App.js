@@ -60,6 +60,7 @@ function App() {
           let newCart = prevCart;
           newCart[existingProductIndex].quantity = product.quantity;
           console.log(newCart)
+          handleQuantity('empty');
           return [...newCart];
         } else {
           
@@ -67,7 +68,7 @@ function App() {
             if (prevCart[0] !== product) {
               prevCart.unshift(product);
             }
-            handleQuantity('empty');;
+            handleQuantity('empty');
             setEmptyCart(false);
           }
           return [...prevCart];
