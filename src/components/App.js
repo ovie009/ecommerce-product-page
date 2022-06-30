@@ -44,14 +44,34 @@ function App() {
     if (action === 'add') {
       setCart(prevCart => {
         // console.log(product);
-        if (product.quantity !== 0){
-          if (prevCart[0] !== product) {
-            prevCart.unshift(product);
+        let newProduct = true;
+        let existingProductIndex = null;
+
+        for (let i = 0; i < prevCart.length; i++) {
+          if (prevCart[i].name === product.name) {
+            newProduct = false;
+            existingProductIndex = i;
           }
-          handleQuantity('empty');;
-          setEmptyCart(false);
         }
-        return [...prevCart];
+
+        console.log(newProduct)
+        if ( newProduct === false) {
+          console.log('got here');
+          let newCart = prevCart;
+          newCart[existingProductIndex].quantity = product.quantity;
+          console.log(newCart)
+          return [...newCart];
+        } else {
+          
+        if (product.quantity !== 0){
+            if (prevCart[0] !== product) {
+              prevCart.unshift(product);
+            }
+            handleQuantity('empty');;
+            setEmptyCart(false);
+          }
+          return [...prevCart];
+        }
       })
     } else if (action === 'checkout'){
       setEmptyCart(true);

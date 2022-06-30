@@ -1,15 +1,9 @@
-@media screen and (max-width: 1024px) {
-    .display-product{
-        display: none;
-    }
-}
-
 .display-product{
     width: 50vw;
     height: calc(100vh -120px);
     max-height: 650px;
     padding: 30px 50px;
-    display: flex;
+    display: none;
     flex-flow: column;
     justify-content: center;
     max-width: 600px;
@@ -187,4 +181,10 @@
     right: calc(30vw - (40px / 2));
     display: grid;
     place-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+    .display-product{
+        display: flex;
+    }
 }
