@@ -45,6 +45,7 @@ const DisplayProduct = () => {
         })
     }
     
+    // reveal overlay 
     const revealOverlay = () => {
         setOverlay((prevOverlay) => {
             return {...prevOverlay, showOverlay: true}
