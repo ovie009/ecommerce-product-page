@@ -45,6 +45,12 @@ const DisplayProduct = () => {
         })
     }
     
+    const revealOverlay = () => {
+        setOverlay((prevOverlay) => {
+            return {...prevOverlay, showOverlay: true}
+        })
+    }
+    
     const nextOverlay = () => {
         setOverlay((prevOverlay) => {
             let Width = prevOverlay.width - 35;
@@ -104,16 +110,16 @@ const DisplayProduct = () => {
     return (
         <div className="display-product">
             <div className="product-image-wrapper">
-                <img src={overlay.displayImage} alt="" className="product-image" />
+                <img src={overlay.displayImage} alt="" className="product-image" onClick={() => revealOverlay()} />
             </div>
             <div className="product-thumbnail-wrapper">
-                <button onClick={() => handleDisplay(true, 0, product_1)} className={overlay.slide0 ? 'thumnail-button active-thumbnail' : 'thumnail-button'}>
+                <button onClick={() => handleDisplay(false, 0, product_1)} className={overlay.slide0 ? 'thumnail-button active-thumbnail' : 'thumnail-button'}>
                 </button>
-                <button onClick={() => handleDisplay(true, -35, product_2)} className={overlay.slide1 ? 'thumnail-button active-thumbnail' : 'thumnail-button'}>
+                <button onClick={() => handleDisplay(false, -35, product_2)} className={overlay.slide1 ? 'thumnail-button active-thumbnail' : 'thumnail-button'}>
                 </button>
-                <button onClick={() => handleDisplay(true, -70, product_3)} className={overlay.slide2 ? 'thumnail-button active-thumbnail' : 'thumnail-button'}>
+                <button onClick={() => handleDisplay(false, -70, product_3)} className={overlay.slide2 ? 'thumnail-button active-thumbnail' : 'thumnail-button'}>
                 </button>
-                <button onClick={() => handleDisplay(true, -105, product_4)} className={overlay.slide3 ? 'thumnail-button active-thumbnail' : 'thumnail-button'}>
+                <button onClick={() => handleDisplay(false, -105, product_4)} className={overlay.slide3 ? 'thumnail-button active-thumbnail' : 'thumnail-button'}>
                 </button>
             </div>
             <div className="overlay-slide-container" style={{
